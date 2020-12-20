@@ -1,0 +1,69 @@
+$primary:#e90606;
+$grey:#5e5e5e;
+$grey-light: #bdbdbd;
+$grey-lighter: #f2f2f2;
+
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url("../fonts/HelveticaNeue-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url("../fonts/HelveticaNeue-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url("../fonts/HelveticaNeue-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url("../fonts/HelveticaNeueCyr-Roman.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+
+
+// For responsive media queries
+
+$breakpoints: (
+    "phone-small":  350px,
+    "phone":        399px,
+    "phone-wide":   479px,
+    "phablet":      559px,
+    "tablet-small": 639px,
+    "tablet-variant": 700px,
+    "tablet":       768px,
+    "tablet-medium": 990px,
+    "tablet-wide":  1023px,
+    "desktop":      1279px,
+    "desktop-medium": 1340px,
+    "desktop-wide": 1439px
+);
+
+@mixin breakpoint($width, $type: max) {
+    @if map-has-key($breakpoints, $width) {
+        $width: map-get($breakpoints, $width);
+        @if $type == min {
+            $width: $width + 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+
