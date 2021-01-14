@@ -1,24 +1,18 @@
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url("../fonts/HelveticaNeue-Bold.ttf") format("truetype");
+  font-family: 'Century Gothic';
+  src: url("../fonts/CenturyGothicBold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url("../fonts/HelveticaNeue-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Helvetica Neue';
-  src: url("../fonts/HelveticaNeue-Light.ttf") format("truetype");
+  font-family: 'Century Gothic';
+  src: url("../fonts/CenturyGothicLight.ttf") format("truetype");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url("../fonts/HelveticaNeueCyr-Roman.ttf") format("truetype");
+  font-family: 'Century Gothic';
+  src: url("../fonts/CenturyGothic.ttf") format("truetype");
   font-weight: 400;
   font-style: normal; }
 
@@ -27,7 +21,7 @@
   stroke-width: 2px; }
 
 .vector__progress {
-  stroke: #e90606;
+  stroke: #fe0000;
   stroke-width: 2px;
   stroke-dasharray: 270;
   stroke-dashoffset: 270;
@@ -115,19 +109,19 @@
           justify-content: center; }
 
 .control__icon svg {
-  fill: #5e5e5e;
+  fill: #63666a;
   -webkit-transition: fill 0.7s ease-in-out;
   transition: fill 0.7s ease-in-out; }
 
 .control__icon.income svg {
-  stroke: #5e5e5e;
+  stroke: #63666a;
   stroke-width: .3; }
 
 .control__icon.income.active svg {
-  stroke: #e90606; }
+  stroke: #fe0000; }
 
 .control__icon.active svg {
-  fill: #e90606; }
+  fill: #fe0000; }
 
 .control__icon-nav {
   width: 56px;

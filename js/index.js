@@ -102,6 +102,8 @@ $(document).ready(function() {
     }
   });
 
+
+
   
   $("[id^=modal-trigger-]").click(function(e) {
     e.preventDefault();
@@ -113,6 +115,17 @@ $(document).ready(function() {
     e.preventDefault();
     let index = $(this).data('value');
     openModal(index);
+  });
+
+  $("[id^=contact-trigger-]").click(function(e) {
+    e.preventDefault();
+    closeModal(1);
+    resetMainModal();
+    setTimeout(function(){
+      openModal(2);
+    },
+    1100)
+    
   });
   
   $("[id^=modal-close-icon-]").click(function(e) {
@@ -172,8 +185,6 @@ $(document).ready(function() {
     $('body,html').removeAttr("style");
     resetContactModal();
   });
-
-
 
 
 

@@ -1,24 +1,18 @@
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url("../fonts/HelveticaNeue-Bold.ttf") format("truetype");
+  font-family: 'Century Gothic';
+  src: url("../fonts/CenturyGothicBold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url("../fonts/HelveticaNeue-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Helvetica Neue';
-  src: url("../fonts/HelveticaNeue-Light.ttf") format("truetype");
+  font-family: 'Century Gothic';
+  src: url("../fonts/CenturyGothicLight.ttf") format("truetype");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Helvetica Neue';
-  src: url("../fonts/HelveticaNeueCyr-Roman.ttf") format("truetype");
+  font-family: 'Century Gothic';
+  src: url("../fonts/CenturyGothic.ttf") format("truetype");
   font-weight: 400;
   font-style: normal; }
 
@@ -55,8 +49,8 @@ html {
 body {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
-  font-family: "Helvetica Neue", sans-serif;
-  color: #5e5e5e; }
+  font-family: "Century Gothic", sans-serif;
+  color: #63666a; }
 
 .flex {
   display: -webkit-box;
@@ -124,7 +118,7 @@ body {
     padding-left: 8px; }
 
 .heir__top {
-  width: 484px; }
+  width: 520px; }
   .heir__top-title {
     margin: 128px 0 20px 0;
     font-weight: 700;
@@ -166,9 +160,9 @@ body {
       font-size: 20px;
       line-height: 130%;
       letter-spacing: 0.01em;
-      color: #e90606; }
+      color: #fe0000; }
     .heir__top-cta a {
-      background: #e90606;
+      background: #fe0000;
       color: #fff;
       font-size: 20px;
       line-height: 24px;
@@ -192,7 +186,7 @@ body {
   .heir__top-soon {
     font-size: 20px;
     line-height: 130%;
-    color: #5e5e5e;
+    color: #63666a;
     letter-spacing: 0.01em; }
 
 .heir__visual {
@@ -271,7 +265,7 @@ body {
         font-size: 16px;
         line-height: 19px;
         letter-spacing: 0.01em;
-        color: #e90606;
+        color: #fe0000;
         text-decoration: none; }
 
 .heir__modal {
@@ -345,8 +339,8 @@ body {
       .heir__modal-headings h3:not(:last-of-type) {
         margin-right: 40px; }
       .heir__modal-headings h3.active {
-        color: #e90606;
-        border-bottom: 3px solid #e90606; }
+        color: #fe0000;
+        border-bottom: 3px solid #fe0000; }
     .heir__modal-headings.contact-headings {
       height: auto; }
       .heir__modal-headings.contact-headings h3 {
@@ -483,7 +477,7 @@ body {
               box-sizing: border-box;
       width: 260px;
       height: 56px;
-      background: #e90606;
+      background: #fe0000;
       -webkit-box-shadow: 0px 16px 40px rgba(0, 0, 0, 0.12);
               box-shadow: 0px 16px 40px rgba(0, 0, 0, 0.12);
       border-radius: 12px;
@@ -526,8 +520,8 @@ body {
   display: inline-block;
   padding-right: 17px;
   margin-right: 17px;
-  border-right: 1px solid #5e5e5e;
-  color: #5e5e5e; }
+  border-right: 1px solid #63666a;
+  color: #63666a; }
 
 .heir__contact-socials {
   position: absolute;
@@ -548,6 +542,11 @@ body {
 
 .heir-contact-container {
   padding-left: 60px; }
+
+a.other-contact-modal {
+  display: inline-block;
+  padding-left: 40px;
+  padding-top: 15px; }
 
 .heir-form-date {
   padding-left: 16px;
@@ -573,7 +572,7 @@ body {
     font-size: 14px;
     line-height: 130%;
     letter-spacing: 0.01em;
-    color: #5e5e5e;
+    color: #63666a;
     background: inherit;
     outline: none;
     border: none; }
@@ -596,7 +595,7 @@ body {
   display: none; }
   .check-input:checked + .check-mark {
     border: none;
-    background-color: #e90606; }
+    background-color: #fe0000; }
     .check-input:checked + .check-mark:after {
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='10' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.687 3.44A1 1 0 10.313 4.894l3 2.833a1 1 0 001.476-.113l4.667-6A1 1 0 107.877.386l-3.99 5.131-2.2-2.077z' fill='%23fff'/%3e%3c/svg%3e"); }
 
@@ -760,7 +759,7 @@ body {
   top: 2px;
   width: 16px;
   height: 16px;
-  border: 1px solid #5e5e5e;
+  border: 1px solid #63666a;
   border-radius: 100%;
   background: #fff; }
 
@@ -769,7 +768,7 @@ body {
   content: '';
   width: 10px;
   height: 10px;
-  background: #e90606;
+  background: #fe0000;
   position: absolute;
   top: 5.2px;
   left: 2.8px;
@@ -832,7 +831,7 @@ body {
           box-shadow: 0px 16px 40px rgba(0, 0, 0, 0.12);
   border-radius: 12px;
   width: 100%;
-  background: #e90606;
+  background: #fe0000;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
@@ -843,14 +842,23 @@ body {
     margin-top: 12px; }
 
 .contact-info {
-  margin: 40px 0 12px 0; }
+  margin: 40px 0 12px 0;
+  width: 75%; }
   .contact-info h5, .contact-info p {
     font-size: 16px;
     line-height: 140%;
     letter-spacing: 0.01em;
-    color: #5e5e5e; }
+    color: #63666a;
+    margin-bottom: 10px; }
   .contact-info h5 {
     font-weight: bold; }
+
+input[type="number"] {
+  -moz-appearance: textfield; }
+  input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+            appearance: none; }
 
 @media only screen and (max-width: 1439px) {
   .container {

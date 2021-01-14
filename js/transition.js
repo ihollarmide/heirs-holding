@@ -31,12 +31,6 @@ const totalLength = 269;
 
 // To get a step shift for animation.
 const circShift = totalLength / imageNodes.length - 1;
-//empty
-// dashArray  === dashoffset === totalLength
-
-//fill up
-// dashArray === totalLength
-// dashoffset === 0
 
 
 
@@ -59,16 +53,6 @@ function moveRight() {
 }
 
 rightBtn.addEventListener('click', moveRight);
-
-// leftBtn.addEventListener('click', () => {
-//   if(imagecounter > 0) {
-//     imagecounter--;
-//   }
-//   if (sliderCounter > 0) {
-//     moveSlider(false);
-//     reverseCounter++;
-//   }
-// })
 
 leftBtn.addEventListener('click', () => {
   return;
@@ -115,25 +99,6 @@ function moveSlider(right = true) {
     
 
   } 
-  
-  // else {
-  //   cloningIconArray.forEach((icon) => {
-  //     let toclone = icon.cloneNode(true);
-  //     iconNodesContainer.insertBefore(toclone, iconNodesContainer.firstChild);
-  //   });
-
-
-  //   iconNodesContainer.style.transform = `translateX(${-moveValue + (reverseCounter * shiftValue)}px)`;
-
-  //   let allIcons = Array.from(iconNodesContainer.querySelectorAll(".control__icon"));
-  //   allIcons.forEach( allIcon => (allIcon.classList.remove("active")));
-  //   allIcons[sliderCounter + 2].classList.add("active");
-  //   circProgress.classList.remove("active");
-  //   setTimeout(function(){
-  //     circProgress.classList.add("active");
-  //   }, 500)
-
-    
-  // }
+ 
   
 }
