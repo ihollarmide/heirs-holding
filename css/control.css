@@ -156,8 +156,6 @@
     width: 120px; } }
 
 @media only screen and (max-width: 1023px) {
-  .control__container {
-    top: 88%; }
   .control__container-icons {
     max-width: 330px; }
   .control__slide-icons {
@@ -168,7 +166,7 @@
 
 @media only screen and (max-width: 990px) {
   .control__container {
-    top: 93%; }
+    top: 105%; }
   .control__container-icons {
     max-width: 285px; }
   .control__slide-icons {

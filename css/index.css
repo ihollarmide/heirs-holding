@@ -82,7 +82,8 @@ body {
   max-width: 52.8125%;
   -webkit-flex-basis: 52.8125%;
       -ms-flex-preferred-size: 52.8125%;
-          flex-basis: 52.8125%; }
+          flex-basis: 52.8125%;
+  position: relative; }
 
 .heir__visual {
   max-width: 47.1875%;
@@ -113,7 +114,11 @@ body {
   font-size: 16px;
   line-height: 19px;
   color: inherit;
-  text-decoration: none; }
+  text-decoration: none;
+  position: absolute;
+  top: -webkit-calc(100% + 74px);
+  top: calc(100% + 74px);
+  left: 0; }
   .heir__contact span {
     padding-left: 8px; }
 
@@ -876,6 +881,9 @@ input[type="number"] {
             flex-basis: 45%; }
   .heir__logo {
     width: 220px; }
+  .heir__contact {
+    top: -webkit-calc(100% + 40px);
+    top: calc(100% + 40px); }
   .heir__top {
     width: 80%; }
     .heir__top-title {
@@ -925,8 +933,9 @@ input[type="number"] {
     width: 60%; }
     .heir__modal-main.contact {
       width: 70%; }
-  .heir__contact span {
-    display: none; }
+  .heir__contact {
+    top: -webkit-calc(100% + 101px);
+    top: calc(100% + 101px); }
   .heir__top-title, .heir__top-subtitle {
     font-size: 30px; } }
 
@@ -1001,8 +1010,10 @@ input[type="number"] {
         height: auto; }
       .heir__visual-card {
         display: none; }
-    .heir__contact span {
-      display: inline-block; }
+    .heir__contact {
+      position: static; }
+      .heir__contact span {
+        display: inline-block; }
     .heir-contact-container {
       padding-left: 30px; } }
 
@@ -1144,7 +1155,7 @@ input[type="number"] {
       .heir__top-cta a {
         width: 210px; }
       .heir__top-cta p {
-        width: 210px;
+        width: 270px;
         font-size: 16px;
         padding-bottom: 16px; } }
 

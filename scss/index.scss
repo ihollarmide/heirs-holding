@@ -68,6 +68,8 @@ body {
   &__intro {
     max-width: 52.8125%;
     flex-basis: 52.8125%;
+
+    position: relative;
   }
 
   &__visual {
@@ -92,6 +94,10 @@ body {
     line-height: 19px;
     color: inherit;
     text-decoration: none;
+
+    position: absolute;
+    top: calc(100% + 74px);
+    left: 0;
 
     span {
       padding-left: 8px;
@@ -935,6 +941,10 @@ input[type="number"] {
       width: 220px;
     }
 
+    &__contact {
+      top: calc(100% + 40px);
+    }
+
     &__top {
       width: 80%;
       
@@ -1036,9 +1046,7 @@ input[type="number"] {
     }
 
     &__contact {
-      span {
-        display: none;
-      }
+      top: calc(100% + 101px);
     }
 
     &__top {
@@ -1148,6 +1156,8 @@ input[type="number"] {
     }
 
     &__contact {
+      position: static;
+
       span {
         display: inline-block;
       }
@@ -1392,7 +1402,7 @@ input[type="number"] {
         }
 
         p {
-          width: 210px;
+          width: 270px;
           font-size: 16px;
           padding-bottom: 16px;
         }
