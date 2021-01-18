@@ -1053,8 +1053,10 @@ input[type="number"] {
       left: unset;
       top: unset; }
   .heir__modal-content {
-    height: 100vh;
-    max-height: 100vh;
+    height: -webkit-calc(100 * var(--vh));
+    height: calc(100 * var(--vh));
+    max-height: -webkit-calc(100 * var(--vh));
+    max-height: calc(100 * var(--vh));
     overflow-y: auto; }
   .heir__modal-headings {
     height: auto; }
@@ -1068,7 +1070,8 @@ input[type="number"] {
     .heir__modal-personal .info-desc {
       margin-bottom: 20px; }
     .heir__modal-personal-form {
-      min-height: 100vh;
+      min-height: -webkit-calc(100 * var(--vh));
+      min-height: calc(100 * var(--vh));
       overflow: unset; }
     .heir__modal-personal .front,
     .heir__modal-personal .back {
@@ -1081,7 +1084,8 @@ input[type="number"] {
     .heir__modal-personal .back {
       width: 100%; }
     .heir__modal-personal.heir-contact {
-      max-height: 100vh;
+      max-height: -webkit-calc(100 * var(--vh));
+      max-height: calc(100 * var(--vh));
       width: unset;
       padding-top: 0; }
   .heir__modal-business-form {
@@ -1111,7 +1115,8 @@ input[type="number"] {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    max-height: 100vh;
+    max-height: -webkit-calc(100 * var(--vh));
+    max-height: calc(100 * var(--vh));
     overflow: auto;
     padding-left: 0; }
   .heir__contact-socials {

@@ -1232,15 +1232,15 @@ input[type="number"] {
 
         &.contact {
           width: 100%;
-        right: unset;
-        left: unset;
-        top: unset;
+          right: unset;
+          left: unset;
+          top: unset;
         }
       }
 
       &-content {
-        height: 100vh;
-        max-height: 100vh;
+        height: calc(100 * var(--vh));
+        max-height: calc(100 * var(--vh));
         overflow-y: auto;
       }
 
@@ -1267,7 +1267,7 @@ input[type="number"] {
         }
 
         &-form {
-          min-height: 100vh;
+          min-height: calc(100 * var(--vh));
           overflow: unset;
         }
 
@@ -1290,7 +1290,7 @@ input[type="number"] {
         }
 
         &.heir-contact {
-          max-height: 100vh;
+          max-height: calc(100 * var(--vh));
           width: unset;
           padding-top: 0;
         }
@@ -1333,7 +1333,7 @@ input[type="number"] {
 
     &-contact-container {
       flex-direction: column;
-      max-height: 100vh;
+      max-height: calc(100 * var(--vh));
       overflow: auto;
       padding-left: 0;
     }

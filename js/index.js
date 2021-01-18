@@ -1,3 +1,8 @@
+window.addEventListener('resize', () => { 
+  document.querySelector(':root').style
+    .setProperty('--vh', window.innerHeight/100 + 'px');
+})
+
 const FloatLabel = (() => {
   
   // add active class and placeholder 
