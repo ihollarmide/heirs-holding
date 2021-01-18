@@ -1,7 +1,8 @@
-window.addEventListener('resize', () => { 
+window.onresize = function() {
   document.querySelector(':root').style
     .setProperty('--vh', window.innerHeight/100 + 'px');
-})
+}
+window.onresize();
 
 const FloatLabel = (() => {
   
