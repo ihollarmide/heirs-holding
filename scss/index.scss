@@ -98,9 +98,22 @@ body {
     position: absolute;
     top: calc(100% + 74px);
     left: 0;
+    transition: all .2s;
+
+    svg {
+      fill: #5e5e5e;
+    }
 
     span {
       padding-left: 8px;
+    }
+
+    &:hover {
+      color: $primary;
+      
+      svg {
+        fill: $primary;
+      }
     }
   }
 

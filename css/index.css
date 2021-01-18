@@ -118,9 +118,17 @@ body {
   position: absolute;
   top: -webkit-calc(100% + 74px);
   top: calc(100% + 74px);
-  left: 0; }
+  left: 0;
+  -webkit-transition: all .2s;
+  transition: all .2s; }
+  .heir__contact svg {
+    fill: #5e5e5e; }
   .heir__contact span {
     padding-left: 8px; }
+  .heir__contact:hover {
+    color: #fe0000; }
+    .heir__contact:hover svg {
+      fill: #fe0000; }
 
 .heir__top {
   width: 520px; }

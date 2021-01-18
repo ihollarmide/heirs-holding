@@ -103,92 +103,6 @@ $(document).ready(function() {
   });
 
 
-
-  
-  $("[id^=modal-trigger-]").click(function(e) {
-    e.preventDefault();
-    let index = $(this).data('value');
-    openModal(index);
-  });
-  
-  $("[id^=modal-cta-trigger-]").click(function(e) {
-    e.preventDefault();
-    let index = $(this).data('value');
-    openModal(index);
-  });
-
-  $("[id^=contact-trigger-]").click(function(e) {
-    e.preventDefault();
-    closeModal(1);
-    resetMainModal();
-    setTimeout(function(){
-      openModal(2);
-    },
-    1100)
-    
-  });
-  
-  $("[id^=modal-close-icon-]").click(function(e) {
-    let index = $(this).data('value');
-    closeModal(index);
-
-    if ($("#modal-form-success").hasClass("active")) {
-      resetMainModal();
-    } else if ($("#heirModalContactSuccess").hasClass("active")) {
-      resetContactModal();
-    }
-  });
-  
-  $("[id^=modal-page-heading-]").click(function(e) {
-    let index = $(this).data('value');
-    $("#modal-page-heading-" + index).addClass("active");
-    $("[id^=modal-page-heading-]").not($("#modal-page-heading-" + index)).removeClass("active");
-    $("#modal-form-page-" + index).addClass("active");
-    $("[id^=modal-form-page-]").not($("#modal-form-page-" + index)).removeClass("active");
-  });
-  
-  $("[id^=modal-next-page-]").click(function(e) {
-    e.preventDefault();
-    let index = $(this).data('value');
-    $("#modal-front-" + index).removeClass("active");
-    $("#modal-back-" + index).addClass("active");
-    handleDeviceBackChange(smallDevice); 
-  });
-  
-  $("[id^=modal-prev-page-]").click(function(e) {
-    e.preventDefault();
-    let index = $(this).data('value');
-    $("#modal-front-" + index).addClass("active");
-    $("#modal-back-" + index).removeClass("active");
-    // Run it initially
-    handleDeviceFrontChange(smallDevice); 
-  });
-  
-  $("#modal-prev-page-2").click(function(e) {
-    e.preventDefault();
-    // let index = $(this).data('value');
-    $("#modal-front-2").addClass("active");
-    $("#modal-back-2").removeClass("active");
-  });
-
-  $("#heir-success-close").click(function() {
-    $(".heir__modal").removeClass("show");
-    $(".heir__modal-main").removeClass("show");
-    $('body,html').removeAttr("style");
-    resetMainModal();
-  });
-
-
-  $("#closeContactModalBtn").click(function() {
-    $(".heir__modal").removeClass("show");
-    $(".heir__modal-main").removeClass("show");
-    $('body,html').removeAttr("style");
-    resetContactModal();
-  });
-
-
-
-
   function resetMainModal() {
     setTimeout(function(){
       $("#modal-container-1").removeClass("show-success");
@@ -204,6 +118,7 @@ $(document).ready(function() {
       $("#modal-back-2").removeClass("active");
       checkedPoliciesPersonal.empty();
       checkedPoliciesBusiness.empty();
+      $('input:checkbox').prop('checked', false);
       chosenValuesPersonal.splice(0, chosenValuesPersonal.length);
       chosenValuesBusiness.splice(0, chosenValuesBusiness.length);
       $("#heirModalFormBusiness").find(".float-container").removeClass("active");
@@ -253,6 +168,87 @@ $(document).ready(function() {
     checkedPoliciesBusiness.text((chosenValuesBusiness.join(', ')));
    }
   })
+
+
+  $("[id^=modal-trigger-]").click(function(e) {
+    e.preventDefault();
+    let index = $(this).data('value');
+    openModal(index);
+  });
+  
+  $("[id^=modal-cta-trigger-]").click(function(e) {
+    e.preventDefault();
+    let index = $(this).data('value');
+    openModal(index);
+  });
+  
+  $("[id^=modal-close-icon-]").click(function(e) {
+    let index = $(this).data('value');
+    closeModal(index);
+
+    if ($("#modal-form-success").hasClass("active")) {
+      resetMainModal();
+    } else if ($("#heirModalContactSuccess").hasClass("active")) {
+      resetContactModal();
+    }
+  });
+  
+  $("[id^=modal-page-heading-]").click(function(e) {
+    let index = $(this).data('value');
+    $("#modal-page-heading-" + index).addClass("active");
+    $("[id^=modal-page-heading-]").not($("#modal-page-heading-" + index)).removeClass("active");
+    $("#modal-form-page-" + index).addClass("active");
+    $("[id^=modal-form-page-]").not($("#modal-form-page-" + index)).removeClass("active");
+  });
+  
+  $("[id^=modal-next-page-]").click(function(e) {
+    e.preventDefault();
+
+    if(($("#check-input-personal-11").is(':checked')) || ($("#check-input-business-18").is(':checked'))) {
+      closeModal(1);
+      resetMainModal();
+      setTimeout(function(){
+        openModal(2);
+      },
+      1100);
+    } else {
+      let index = $(this).data('value');
+      $("#modal-front-" + index).removeClass("active");
+      $("#modal-back-" + index).addClass("active");
+      handleDeviceBackChange(smallDevice);
+    }   
+  });
+  
+  $("[id^=modal-prev-page-]").click(function(e) {
+    e.preventDefault();
+    let index = $(this).data('value');
+    $("#modal-front-" + index).addClass("active");
+    $("#modal-back-" + index).removeClass("active");
+    // Run it initially
+    handleDeviceFrontChange(smallDevice); 
+  });
+  
+  $("#modal-prev-page-2").click(function(e) {
+    e.preventDefault();
+    // let index = $(this).data('value');
+    $("#modal-front-2").addClass("active");
+    $("#modal-back-2").removeClass("active");
+  });
+
+  $("#heir-success-close").click(function() {
+    $(".heir__modal").removeClass("show");
+    $(".heir__modal-main").removeClass("show");
+    $('body,html').removeAttr("style");
+    resetMainModal();
+  });
+
+
+  $("#closeContactModalBtn").click(function() {
+    $(".heir__modal").removeClass("show");
+    $(".heir__modal-main").removeClass("show");
+    $('body,html').removeAttr("style");
+    resetContactModal();
+  });
 
 });
 
