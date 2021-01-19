@@ -290,16 +290,16 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
   opacity: 0;
   z-index: -9999;
   pointer-events: none; }
   .heir__modal.show {
     z-index: 999999999999999;
     opacity: 1;
-    -webkit-transition: all .5s ease-out;
-    transition: all .5s ease-out;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
     pointer-events: auto; }
   .heir__modal-main {
     position: absolute;
