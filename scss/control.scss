@@ -215,6 +215,12 @@
   }
 }
 
+@include breakpoint("phablet") {
+  .control__container {
+    display: none;
+  }
+}
+
 
 @include breakpoint("phone-wide") {
   .control {

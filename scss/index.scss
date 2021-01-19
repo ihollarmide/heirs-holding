@@ -1239,8 +1239,8 @@ input[type="number"] {
       }
 
       &-content {
-        height: calc(100 * var(--vh));
-        max-height: calc(100 * var(--vh));
+        height: 100vh;
+        max-height: 100vh;
         overflow-y: auto;
       }
 
@@ -1267,7 +1267,7 @@ input[type="number"] {
         }
 
         &-form {
-          min-height: calc(100 * var(--vh));
+          min-height: 100vh;
           overflow: unset;
         }
 
@@ -1290,7 +1290,7 @@ input[type="number"] {
         }
 
         &.heir-contact {
-          max-height: calc(100 * var(--vh));
+          max-height: 100vh;
           width: unset;
           padding-top: 0;
         }
@@ -1330,10 +1330,14 @@ input[type="number"] {
       }
     }
 
+    &__intro {
+      margin-bottom: 100px;
+    }
+
 
     &-contact-container {
       flex-direction: column;
-      max-height: calc(100 * var(--vh));
+      max-height: 100vh;
       overflow: auto;
       padding-left: 0;
     }
@@ -1351,6 +1355,12 @@ input[type="number"] {
           margin-bottom: 0;
         }
       }
+    }
+
+    &__modal-personal,
+    &__modal-success {
+      min-height: 1024px;
+      height: 1024px;
     }
   }
 

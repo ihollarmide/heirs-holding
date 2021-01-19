@@ -1053,10 +1053,8 @@ input[type="number"] {
       left: unset;
       top: unset; }
   .heir__modal-content {
-    height: -webkit-calc(100 * var(--vh));
-    height: calc(100 * var(--vh));
-    max-height: -webkit-calc(100 * var(--vh));
-    max-height: calc(100 * var(--vh));
+    height: 100vh;
+    max-height: 100vh;
     overflow-y: auto; }
   .heir__modal-headings {
     height: auto; }
@@ -1070,8 +1068,7 @@ input[type="number"] {
     .heir__modal-personal .info-desc {
       margin-bottom: 20px; }
     .heir__modal-personal-form {
-      min-height: -webkit-calc(100 * var(--vh));
-      min-height: calc(100 * var(--vh));
+      min-height: 100vh;
       overflow: unset; }
     .heir__modal-personal .front,
     .heir__modal-personal .back {
@@ -1084,8 +1081,7 @@ input[type="number"] {
     .heir__modal-personal .back {
       width: 100%; }
     .heir__modal-personal.heir-contact {
-      max-height: -webkit-calc(100 * var(--vh));
-      max-height: calc(100 * var(--vh));
+      max-height: 100vh;
       width: unset;
       padding-top: 0; }
   .heir__modal-business-form {
@@ -1109,14 +1105,15 @@ input[type="number"] {
       padding-bottom: 10px; }
       .heir__modal-headings h3:not(:last-of-type) {
         margin-right: 15px; }
+  .heir__intro {
+    margin-bottom: 100px; }
   .heir-contact-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    max-height: -webkit-calc(100 * var(--vh));
-    max-height: calc(100 * var(--vh));
+    max-height: 100vh;
     overflow: auto;
     padding-left: 0; }
   .heir__contact-socials {
@@ -1135,6 +1132,9 @@ input[type="number"] {
     .heir__contact-socials a {
       margin-right: 20px;
       margin-bottom: 0; }
+  .heir__modal-personal, .heir__modal-success {
+    min-height: 1024px;
+    height: 1024px; }
   .contact-info {
     width: unset;
     margin: 80px 0 12px 0; } }
