@@ -100,7 +100,7 @@ body {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 32px 0 35px; }
+    padding: 20px 0; }
 
 .heir__bg {
   background-image: url("../images/heir-background.jpg");
@@ -1080,7 +1080,7 @@ input[type="number"] {
   .btn-form.btn-next {
     width: 100%; }
   .heir__header-container {
-    padding: 20px 0; }
+    padding: 15px 0; }
   .heir__header, .heir__bg {
     padding: 0 20px; }
   .heir__top {
