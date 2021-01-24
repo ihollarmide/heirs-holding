@@ -78,6 +78,41 @@ body {
 .heir__visual-img-box.home img {
   z-index: 10; }
 
+.heir__header {
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 999999999999;
+  background: #fff; }
+  .heir__header-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 32px 0 35px; }
+
+.heir__bg {
+  background-image: url("../images/heir-background.jpg");
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-color: #5e5e5e;
+  background-position: center center; }
+  @media only screen and (max-width: 559px) {
+    .heir__bg {
+      background-image: url("../images/mobile-bg.jpg"); } }
+
 .heir__intro {
   max-width: 52.8125%;
   -webkit-flex-basis: 52.8125%;
@@ -95,15 +130,22 @@ body {
   width: 240px; }
 
 .heir__nav {
-  padding: 32px 60px 0 0;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
+  .heir__nav-social {
+    padding-right: 38px;
+    -webkit-transition: all .2s;
+    transition: all .2s; }
+    .heir__nav-social svg {
+      fill: #5e5e5e; }
+    .heir__nav-social:hover svg {
+      fill: #fe0000; }
 
 .heir__contact {
   height: 22.67px;
@@ -115,10 +157,6 @@ body {
   line-height: 19px;
   color: inherit;
   text-decoration: none;
-  position: absolute;
-  top: -webkit-calc(100% + 74px);
-  top: calc(100% + 74px);
-  left: 0;
   -webkit-transition: all .2s;
   transition: all .2s; }
   .heir__contact svg {
@@ -133,15 +171,17 @@ body {
 .heir__top {
   width: 520px; }
   .heir__top-title {
-    margin: 128px 0 20px 0;
+    margin: 165px 0 20px 0;
     font-weight: 700;
     font-size: 40px;
-    line-height: 100%; }
+    line-height: 100%;
+    color: #fff; }
   .heir__top-subtitle {
     font-weight: 300;
     font-size: 40px;
     line-height: 100%;
-    position: relative; }
+    position: relative;
+    color: #fff; }
     .heir__top-subtitle:after {
       content: "";
       position: absolute;
@@ -166,14 +206,14 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding-right: 32px;
-    margin-bottom: 92px; }
+    margin-bottom: 112px; }
     .heir__top-cta p {
       width: 284px;
       font-weight: 700;
       font-size: 20px;
       line-height: 130%;
       letter-spacing: 0.01em;
-      color: #fe0000; }
+      color: #fff; }
     .heir__top-cta a {
       background: #fe0000;
       color: #fff;
@@ -197,10 +237,14 @@ body {
       .heir__top-cta a svg {
         margin-left: 24px; }
   .heir__top-soon {
-    font-size: 20px;
+    position: absolute;
+    top: 110%;
+    font-size: 26px;
     line-height: 130%;
-    color: #63666a;
+    color: #fe0000;
     letter-spacing: 0.01em; }
+    .heir__top-soon span {
+      font-weight: bold; }
 
 .heir__visual {
   position: relative; }
@@ -872,7 +916,7 @@ input[type="number"] {
             appearance: none; }
 
 @media only screen and (max-width: 1439px) {
-  .container {
+  .heir__header, .heir__bg {
     padding: 0 30px; } }
 
 @media only screen and (min-width: 1279px) and (max-width: 1348px) {
@@ -963,24 +1007,16 @@ input[type="number"] {
     .heir__modal-personal .front,
     .heir__modal-personal .back {
       padding-left: 30px; }
+    .heir__nav-social {
+      display: none; }
     .heir__intro {
       max-width: 100%; }
-    .heir__nav {
-      padding: 16px 30px;
-      margin: 0 -30px;
-      -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
-              box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 999999999999;
-      background: #fff; }
     .heir__top {
       width: 550px;
       margin: 0 auto;
       text-align: center;
       margin-bottom: 0;
-      padding-top: 71px; }
+      padding: 1px 0 71px; }
       .heir__top-subtitle::after {
         content: "";
         left: 50%;
@@ -998,7 +1034,13 @@ input[type="number"] {
           -webkit-justify-content: space-around;
               -ms-flex-pack: distribute;
                   justify-content: space-around; }
+      .heir__top-soon {
+        position: static;
+        top: unset;
+        text-align: center;
+        color: #fff; }
     .heir__visual {
+      position: absolute;
       max-width: 100%;
       display: -webkit-box;
       display: -webkit-flex;
@@ -1037,11 +1079,28 @@ input[type="number"] {
     margin-bottom: 50px; }
   .btn-form.btn-next {
     width: 100%; }
-  .heir__visual-img {
-    display: none; }
-    .heir__visual-img-mobile {
-      display: block;
-      width: 100%; }
+  .heir__header-container {
+    padding: 20px 0; }
+  .heir__header, .heir__bg {
+    padding: 0 20px; }
+  .heir__top {
+    padding-bottom: 40px; }
+    .heir__top-container {
+      position: relative; }
+  .heir__visual {
+    width: 100%;
+    left: 0;
+    top: -webkit-calc(100% + 50px);
+    top: calc(100% + 50px); }
+    .heir__visual-img {
+      display: none; }
+      .heir__visual-img-mobile {
+        display: block;
+        width: 100%; }
+  .heir__top-soon {
+    font-size: 17px; }
+    .heir__top-soon span {
+      font-weight: normal; }
   .heir__modal-main {
     width: 100%;
     right: unset;
@@ -1140,11 +1199,6 @@ input[type="number"] {
     margin: 80px 0 12px 0; } }
 
 @media only screen and (max-width: 479px) {
-  .container {
-    padding: 0 20px; }
-  .heir__nav {
-    margin: 0 -20px;
-    padding: 16px 20px; }
   .heir__logo {
     width: 168px; }
   .heir__contact span {
