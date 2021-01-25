@@ -38,6 +38,7 @@ a {
   text-decoration: none; }
 
 html {
+  height: 100%;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -50,7 +51,12 @@ body {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
   font-family: "Century Gothic", sans-serif;
-  color: #63666a; }
+  color: #63666a;
+  height: 100%; }
+
+.wrapper {
+  position: relative;
+  height: 100%; }
 
 .flex {
   display: -webkit-box;
@@ -171,7 +177,7 @@ body {
 .heir__top {
   width: 520px; }
   .heir__top-title {
-    margin: 165px 0 20px 0;
+    margin: 100px 0 20px 0;
     font-weight: 700;
     font-size: 40px;
     line-height: 100%;
@@ -206,7 +212,7 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding-right: 32px;
-    margin-bottom: 112px; }
+    margin-bottom: 90px; }
     .heir__top-cta p {
       width: 284px;
       font-weight: 700;
@@ -251,10 +257,11 @@ body {
   .heir__visual-images {
     position: relative; }
   .heir__visual-img {
-    width: 504px;
-    height: 592px;
+    width: 440px;
+    height: 517px;
     border-radius: 0 0 20px 20px;
-    position: absolute; }
+    position: absolute;
+    right: 18%; }
     .heir__visual-img-box {
       -webkit-transition: opacity .8s ease-in-out;
       transition: opacity .8s ease-in-out; }
@@ -264,7 +271,7 @@ body {
       display: none; }
   .heir__visual-card {
     position: absolute;
-    top: 200px;
+    top: 96px;
     right: 0;
     z-index: 999999999;
     -webkit-box-shadow: 0px 20px 60px 0px rgba(0, 0, 0, 0.12);
@@ -598,7 +605,40 @@ body {
     margin-bottom: 32px; }
 
 .heir-contact-container {
+  min-height: 88vh;
+  overflow: auto;
   padding-left: 60px; }
+
+.heir__footer {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  bottom: 0;
+  font-size: 12.5px;
+  line-height: 130%;
+  color: #5e5e5e;
+  letter-spacing: 0.01em; }
+  .heir__footer-container {
+    padding: 18px 0 25px;
+    border-top: 1px solid #c5c5c5;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .heir__footer-link a {
+    color: inherit; }
+  .heir__footer-link a:first-child {
+    padding-right: 15px;
+    border-right: 1px solid #c5c5c5;
+    margin-right: 15px; }
 
 a.other-contact-modal {
   display: inline-block; }
@@ -961,6 +1001,8 @@ input[type="number"] {
     width: 55%; }
   .heir__modal-personal.heir-contact {
     width: 350px; }
+  .heir__footer {
+    padding: 0 30px; }
   .contact-info {
     width: 300px; } }
 
@@ -1055,7 +1097,8 @@ input[type="number"] {
         border-radius: 20px 20px 0 0;
         max-width: unset;
         width: 100%;
-        height: auto; }
+        height: auto;
+        right: unset; }
       .heir__visual-card {
         display: none; }
     .heir__contact {
@@ -1063,7 +1106,10 @@ input[type="number"] {
       .heir__contact span {
         display: inline-block; }
     .heir-contact-container {
-      padding-left: 30px; } }
+      padding-left: 30px; }
+    .heir__footer {
+      top: 200%;
+      padding: 0 20px; } }
 
 @media only screen and (max-width: 639px) {
   .heir__top {
@@ -1194,6 +1240,8 @@ input[type="number"] {
   .heir__modal-personal, .heir__modal-success {
     min-height: 1024px;
     height: 1024px; }
+  .heir__footer {
+    top: 130%; }
   .contact-info {
     width: unset;
     margin: 80px 0 12px 0; } }
@@ -1222,7 +1270,26 @@ input[type="number"] {
       .heir__top-cta p {
         width: 270px;
         font-size: 16px;
-        padding-bottom: 16px; } }
+        padding-bottom: 16px; }
+  .heir__footer {
+    top: 100%; }
+    .heir__footer-container {
+      margin-top: 20px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .heir__footer-container p {
+        margin-top: 30px;
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+            -ms-flex-order: 2;
+                order: 2; } }
 
 @media only screen and (max-width: 350px) {
   .heir__top {

@@ -50,6 +50,10 @@
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
   top: 105%; }
 
@@ -145,6 +149,8 @@
     pointer-events: none; }
 
 @media only screen and (max-width: 1279px) {
+  .control__container {
+    top: 115%; }
   .control__container-icons {
     max-width: 360px; }
   .control__slide-icons {
@@ -164,7 +170,8 @@
 
 @media only screen and (max-width: 990px) {
   .control__container {
-    top: 115%; }
+    top: 104%;
+    left: -15%; }
   .control__container-icons {
     max-width: 285px; }
   .control__slide-icons {
@@ -179,6 +186,7 @@
 @media only screen and (max-width: 768px) {
   .control__container {
     top: 93%;
+    left: unset;
     margin: 0 -30px; }
   .control__container-icons {
     max-width: 100vw; }

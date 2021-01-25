@@ -29,6 +29,7 @@
 .control__container {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   top: 105%;
 }
@@ -104,6 +105,10 @@
 @include breakpoint("desktop") {
   .control {
 
+    &__container {
+      top: 115%;
+    }
+
     &__container-icons {
       max-width: 360px;
     }
@@ -146,7 +151,8 @@
 @include breakpoint("tablet-medium") {
   .control {
     &__container {
-      top: 115%;
+      top: 104%;
+      left: -15%;
     }
 
     &__container-icons {
@@ -176,6 +182,7 @@
   .control {
     &__container {
       top: 93%;
+      left: unset;
       margin: 0 -30px;
     }
 
