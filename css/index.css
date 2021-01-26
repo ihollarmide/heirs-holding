@@ -106,7 +106,7 @@ body {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 20px 0; }
+    padding: 15px 0; }
 
 .heir__bg {
   background-image: url("../images/heir-background.jpg");

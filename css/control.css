@@ -150,7 +150,7 @@
 
 @media only screen and (max-width: 1279px) {
   .control__container {
-    top: 115%; }
+    top: 95%; }
   .control__container-icons {
     max-width: 360px; }
   .control__slide-icons {
@@ -169,9 +169,6 @@
     width: 110px; } }
 
 @media only screen and (max-width: 990px) {
-  .control__container {
-    top: 104%;
-    left: -15%; }
   .control__container-icons {
     max-width: 285px; }
   .control__slide-icons {
