@@ -368,29 +368,46 @@ window.addEventListener("DOMContentLoaded", function() {
 
   // handle the form submission event
 
-  formPersonal.addEventListener("submit", function(ev) {
-    ev.preventDefault();
-    var data = new FormData(formPersonal);
-    ajax(formPersonal.method, formPersonal.action, data, successPersonal, errorPersonal);
-  });
-   var formBusiness = document.getElementById("heirModalFormBusiness");
+  // formPersonal.addEventListener("submit", function(ev) {
+  //   ev.preventDefault();
+  //   var data = new FormData(formPersonal);
+  //   ajax(formPersonal.method, formPersonal.action, data, successPersonal, errorPersonal);
+  // });
+  //  var formBusiness = document.getElementById("heirModalFormBusiness");
 
-  $("#heirModalFormBusiness").submit(function(e){
-    e.preventDefault();
-    var action = $(this).attr("action");
-    $.ajax({
-      type: "POST",
-      url: action,
-      crossDomain: true,
-      data: new FormData(this),
-      dataType: "json",
-      processData: false,
-      contentType: false,
-      headers: {
-        "Accept": "application/json"
-      }
-    }).done(function() {
-      formBusiness.reset();
+  // $("#heirModalFormBusiness").submit(function(e){
+  //   e.preventDefault();
+  //   var action = $(this).attr("action");
+  //   $.ajax({
+  //     type: "POST",
+  //     url: action,
+  //     crossDomain: true,
+  //     data: new FormData(this),
+  //     dataType: "json",
+  //     processData: false,
+  //     contentType: false,
+  //     headers: {
+  //       "Accept": "application/json"
+  //     }
+  //   }).done(function() {
+  //     formBusiness.reset();
+  //     // button.style = "display: none ";
+  //     $("#modal-heading-container-1").hide();
+  //     $("#modal-container-1").addClass("show-success");
+  //     $("#modal-form-page-1").removeClass("active");
+  //     $("#modal-form-page-2").removeClass("active");
+  //     $("#modal-form-success").addClass("active");
+  //     document.getElementById("modal-form-success").scrollIntoView({
+  //       behavior: "smooth", // or "auto" or "instant"
+  //       block: "start" // or "end"
+  //     });
+  //   }).fail(function() {
+  //      return
+  //   });
+  // });
+
+  function successBusiness() {
+    formBusiness.reset();
       // button.style = "display: none ";
       $("#modal-heading-container-1").hide();
       $("#modal-container-1").addClass("show-success");
@@ -401,10 +418,52 @@ window.addEventListener("DOMContentLoaded", function() {
         behavior: "smooth", // or "auto" or "instant"
         block: "start" // or "end"
       });
-    }).fail(function() {
-       return
-    });
-  });
+  }
+
+  var form = document.getElementById("heirModalFormBusiness");
+  var businessModalForm = document.getElementById("heirModalFormBusiness");
+   form.addEventListener("submit", formSubmit);
+   
+   function formSubmit(e) {
+       e.preventDefault()
+   
+       const formData = new FormData();
+       formData.append(
+           'What matters to your business?',
+           businessModalForm.querySelector('input[name="What matters to your business?"]').value
+       )
+       formData.append(
+           'First Name',
+           businessModalForm.querySelector('input[name="First Name"]').value
+       )
+       formData.append(
+        'Last Name',
+        businessModalForm.querySelector('input[name="Last Name"]').value
+        )
+
+       formData.append(
+        'Company Name',
+        businessModalForm.querySelector('input[name="Company Name"]').value
+        )
+
+        formData.append(
+          'Contact Email Address',
+          businessModalForm.querySelector('input[name="Contact Email Address"]').value
+        )
+
+        formData.append(
+          'Phone Number',
+          businessModalForm.querySelector('input[name="Phone Number"]').value
+        )
+   
+       fetch("https://getform.io/f/57a72cae-6d37-4222-8e69-5cc5f5f4b04a",
+       {
+           method: "POST",
+           body: formData,
+       })
+       .then(response => successBusiness)
+       .catch(error => console.log(error))
+       }
 
 
     // get the form elements defined in your form HTML above
