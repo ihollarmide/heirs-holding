@@ -373,6 +373,7 @@ window.addEventListener("DOMContentLoaded", function() {
     var data = new FormData(formPersonal);
     ajax(formPersonal.method, formPersonal.action, data, successPersonal, errorPersonal);
   });
+   var formBusiness = document.getElementById("heirModalFormBusiness");
 
   $("#heirModalFormBusiness").submit(function(e){
     e.preventDefault();
@@ -409,7 +410,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
     // get the form elements defined in your form HTML above
     
-  // var formBusiness = document.getElementById("heirModalFormBusiness");
+ 
   // // var buttonBusiness = document.getElementById("modal-form-submit-2");
   // // var statusBusiness = document.getElementById("my-form-status-personal");
 
