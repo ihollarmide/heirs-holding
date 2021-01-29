@@ -374,41 +374,73 @@ window.addEventListener("DOMContentLoaded", function() {
     ajax(formPersonal.method, formPersonal.action, data, successPersonal, errorPersonal);
   });
 
+  $("#heirModalFormBusiness").submit(function(e){
+    e.preventDefault();
+    var action = $(this).attr("action");
+    $.ajax({
+      type: "POST",
+      url: action,
+      crossDomain: true,
+      data: new FormData(this),
+      dataType: "json",
+      contentType: "multipart/form-data",
+      processData: false,
+      contentType: false,
+      headers: {
+        "Accept": "application/json"
+      }
+    }).done(function() {
+      formBusiness.reset();
+      // button.style = "display: none ";
+      $("#modal-heading-container-1").hide();
+      $("#modal-container-1").addClass("show-success");
+      $("#modal-form-page-1").removeClass("active");
+      $("#modal-form-page-2").removeClass("active");
+      $("#modal-form-success").addClass("active");
+      document.getElementById("modal-form-success").scrollIntoView({
+        behavior: "smooth", // or "auto" or "instant"
+        block: "start" // or "end"
+      });
+    }).fail(function() {
+       return
+    });
+  });
+
 
     // get the form elements defined in your form HTML above
     
-  var formBusiness = document.getElementById("heirModalFormBusiness");
-  // var buttonBusiness = document.getElementById("modal-form-submit-2");
-  // var statusBusiness = document.getElementById("my-form-status-personal");
+  // var formBusiness = document.getElementById("heirModalFormBusiness");
+  // // var buttonBusiness = document.getElementById("modal-form-submit-2");
+  // // var statusBusiness = document.getElementById("my-form-status-personal");
 
-  // Success and Error functions for after the form is submitted
+  // // Success and Error functions for after the form is submitted
   
-  function successBusiness() {
-    formBusiness.reset();
-    // button.style = "display: none ";
-    $("#modal-heading-container-1").hide();
-    $("#modal-container-1").addClass("show-success");
-    $("#modal-form-page-1").removeClass("active");
-    $("#modal-form-page-2").removeClass("active");
-    $("#modal-form-success").addClass("active");
-    document.getElementById("modal-form-success").scrollIntoView({
-      behavior: "smooth", // or "auto" or "instant"
-      block: "start" // or "end"
-    });
-    // statusBusiness.innerHTML = "Thanks!";
-  }
+  // function successBusiness() {
+  //   formBusiness.reset();
+  //   // button.style = "display: none ";
+  //   $("#modal-heading-container-1").hide();
+  //   $("#modal-container-1").addClass("show-success");
+  //   $("#modal-form-page-1").removeClass("active");
+  //   $("#modal-form-page-2").removeClass("active");
+  //   $("#modal-form-success").addClass("active");
+  //   document.getElementById("modal-form-success").scrollIntoView({
+  //     behavior: "smooth", // or "auto" or "instant"
+  //     block: "start" // or "end"
+  //   });
+  //   // statusBusiness.innerHTML = "Thanks!";
+  // }
 
-  function errorBusiness() {
-    // statusBusiness.innerHTML = "Oops! There was a problem.";
-  }
+  // function errorBusiness() {
+  //   // statusBusiness.innerHTML = "Oops! There was a problem.";
+  // }
 
-  // handle the form submission event
+  // // handle the form submission event
 
-  formBusiness.addEventListener("submit", function(ev) {
-    ev.preventDefault();
-    var data = new FormData(formBusiness);
-    ajax(formBusiness.method, formBusiness.action, data, successBusiness, errorBusiness);
-  });
+  // formBusiness.addEventListener("submit", function(ev) {
+  //   ev.preventDefault();
+  //   var data = new FormData(formBusiness);
+  //   ajax(formBusiness.method, formBusiness.action, data, successBusiness, errorBusiness);
+  // });
 
 
 
