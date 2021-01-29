@@ -384,7 +384,6 @@ window.addEventListener("DOMContentLoaded", function() {
       crossDomain: true,
       data: new FormData(this),
       dataType: "json",
-      contentType: "multipart/form-data",
       processData: false,
       contentType: false,
       headers: {
