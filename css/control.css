@@ -55,7 +55,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
-  top: 105%; }
+  top: 95%; }
 
 .control__container-icons {
   display: -webkit-box;
@@ -149,8 +149,6 @@
     pointer-events: none; }
 
 @media only screen and (max-width: 1279px) {
-  .control__container {
-    top: 95%; }
   .control__container-icons {
     max-width: 360px; }
   .control__slide-icons {

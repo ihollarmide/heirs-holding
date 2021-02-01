@@ -31,7 +31,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  top: 105%;
+  top: 95%;
 }
 
 .control__container-icons {
@@ -104,10 +104,6 @@
 
 @include breakpoint("desktop") {
   .control {
-
-    &__container {
-      top: 95%;
-    }
 
     &__container-icons {
       max-width: 360px;

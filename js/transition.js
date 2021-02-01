@@ -1,5 +1,3 @@
-const imageNodes = Array.from(document.querySelectorAll(".heir__visual-img-box"));
-
 const iconNodes = Array.from(document.querySelectorAll(".control__icon"));
 const headerNodes = Array.from(document.querySelectorAll(".heir__visual-card-top-section"));
 const bodyNodes = Array.from(document.querySelectorAll(".heir__visual-card-body-text"));
@@ -30,7 +28,7 @@ const shiftValue = iconNodes[1].offsetWidth;
 const totalLength = 269;
 
 // To get a step shift for animation.
-const circShift = totalLength / imageNodes.length - 1;
+const circShift = totalLength / iconNodes.length - 1;
 
 
 
@@ -40,7 +38,7 @@ function moveRight() {
   let newIcons = Array.from(document.querySelectorAll(".control__icon"));
 
   // Reset imageAnimation wilth counter so that it starts the animation again when it reaches the end.
-  if(imagecounter === imageNodes.length){
+  if(imagecounter === iconNodes.length){
     imagecounter = 0;
   }
 
@@ -65,12 +63,10 @@ function moveSlider(right = true) {
   //update image and content.
 
   //clear all images/contents to opacity of 0.
-  imageNodes.forEach((imageNode) => (imageNode.style.opacity = 0));
   headerNodes.forEach((headerNode) => (headerNode.style.opacity = 0));
   bodyNodes.forEach((bodyNode) => (bodyNode.style.opacity = 0));
 
   //activate next image/contents to opacity of 1
-  imageNodes[imagecounter].style.opacity = 1;
   headerNodes[imagecounter].style.opacity = 1;
   bodyNodes[imagecounter].style.opacity = 1;
 

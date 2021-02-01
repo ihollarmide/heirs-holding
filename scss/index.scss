@@ -66,10 +66,6 @@ body {
   z-index: 10;
 }
 
-.heir__visual-img-box.home img {
-  z-index: 10;
-}
-
 .heir {
   &__header {
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
@@ -166,7 +162,7 @@ body {
     width: 520px;
 
     &-title {
-      margin: 100px 0 20px 0;
+      margin: 105px 0 20px 0;
       font-weight: 700;
       font-size: 40px;
       line-height: 100%;
@@ -175,32 +171,22 @@ body {
 
     &-subtitle {
       font-weight: 300;
-      font-size: 40px;
+      font-size: 36px;
       line-height: 100%;
       position: relative;
       color: $white;
-
-      &:after {
-        content: "";
-        position: absolute;
-        left: 2px;
-        top: calc(100% + 12px);
-        width: 1px;
-        height: 58px;
-        background-color: #e0e0e0;
-      }
     }
 
     &-cta {
-      margin-top: 82px;
+      width: 400px;
+      margin-top: 49px;
+      margin-bottom: 98px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-right: 32px;
-      margin-bottom: 90px;
 
       p {
-        width: 284px;
+        width: 165px;
         font-weight: 700;
         font-size: 20px;
         line-height: 130%;
@@ -249,33 +235,14 @@ body {
       position: relative;
     }
 
-    &-img {
-      width: 440px;
-      height: 517px;
-      border-radius: 0 0 20px 20px;
-      position: absolute;
-      right: 18%;
-
-      &-box {
-        transition: opacity .8s ease-in-out;
-      }
-
-      &-mobile {
-        border-radius: 20px 20px 0 0;
-        position: absolute;
-        display: none;
-      }
-
-    }
-
     &-card {
       position: absolute;
-      top: 96px;
-      right: 0;
+      top: 75px;
+      right: 12%;
       z-index: 999999999;
       box-shadow: 0px 20px 60px 0px rgba(0, 0, 0, 0.12);
-      width: 272px;
-      height: 316px;
+      width: 310px;
+      height: 330px;
       border-radius: 20px;
       background-color: #fff;
 
@@ -665,7 +632,6 @@ body {
 
   &__footer {
     position: absolute;
-    top: 100%;
     width: 100%;
     bottom: 0;
     font-size: 12.5px;
@@ -1230,6 +1196,7 @@ input[type="number"] {
       }
 
       &-cta {
+        width: unset;
         flex-direction: column;
         margin-bottom: 30px;
 
@@ -1263,7 +1230,10 @@ input[type="number"] {
       }
 
       &-card {
-        display: none;
+        position: relative;
+        right: unset;
+        top: unset;
+        width: 100%;
       }
     }
 
@@ -1280,8 +1250,9 @@ input[type="number"] {
     }
 
     &__footer {
-      top: 200%;
       padding: 0 20px;
+      bottom: unset;
+      top: 1130px;
     }
 
   }
@@ -1302,6 +1273,10 @@ input[type="number"] {
           width: 90%;
         }
       }
+    }
+
+    &__footer {
+      top: 1150px;
     }
   }
 }
@@ -1341,15 +1316,6 @@ input[type="number"] {
       width: 100%;
       left: 0;
       top: calc(100% + 50px);
-
-      &-img {
-        display: none;
-
-        &-mobile {
-          display: block;
-          width: 100%;
-        }
-      }
     }
 
     &__top {
@@ -1495,14 +1461,14 @@ input[type="number"] {
       }
     }
 
+    &__footer {
+      top: 980px;
+    }
+
     &__modal-personal,
     &__modal-success {
       min-height: 1024px;
       height: 1024px;
-    }
-
-    &__footer {
-      top: 130%;
     }
   }
 
@@ -1569,7 +1535,7 @@ input[type="number"] {
     }
 
     &__footer {
-      top: 100%;
+      top: 880px;
 
       &-container {
         margin-top: 20px;

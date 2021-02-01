@@ -81,9 +81,6 @@ body {
 .heir__visual-card-body-text.home {
   z-index: 10; }
 
-.heir__visual-img-box.home img {
-  z-index: 10; }
-
 .heir__header {
   -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
           box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
@@ -177,28 +174,21 @@ body {
 .heir__top {
   width: 520px; }
   .heir__top-title {
-    margin: 100px 0 20px 0;
+    margin: 105px 0 20px 0;
     font-weight: 700;
     font-size: 40px;
     line-height: 100%;
     color: #fff; }
   .heir__top-subtitle {
     font-weight: 300;
-    font-size: 40px;
+    font-size: 36px;
     line-height: 100%;
     position: relative;
     color: #fff; }
-    .heir__top-subtitle:after {
-      content: "";
-      position: absolute;
-      left: 2px;
-      top: -webkit-calc(100% + 12px);
-      top: calc(100% + 12px);
-      width: 1px;
-      height: 58px;
-      background-color: #e0e0e0; }
   .heir__top-cta {
-    margin-top: 82px;
+    width: 400px;
+    margin-top: 49px;
+    margin-bottom: 98px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -210,11 +200,9 @@ body {
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding-right: 32px;
-    margin-bottom: 90px; }
+            justify-content: space-between; }
     .heir__top-cta p {
-      width: 284px;
+      width: 165px;
       font-weight: 700;
       font-size: 20px;
       line-height: 130%;
@@ -256,28 +244,15 @@ body {
   position: relative; }
   .heir__visual-images {
     position: relative; }
-  .heir__visual-img {
-    width: 440px;
-    height: 517px;
-    border-radius: 0 0 20px 20px;
-    position: absolute;
-    right: 18%; }
-    .heir__visual-img-box {
-      -webkit-transition: opacity .8s ease-in-out;
-      transition: opacity .8s ease-in-out; }
-    .heir__visual-img-mobile {
-      border-radius: 20px 20px 0 0;
-      position: absolute;
-      display: none; }
   .heir__visual-card {
     position: absolute;
-    top: 96px;
-    right: 0;
+    top: 75px;
+    right: 12%;
     z-index: 999999999;
     -webkit-box-shadow: 0px 20px 60px 0px rgba(0, 0, 0, 0.12);
             box-shadow: 0px 20px 60px 0px rgba(0, 0, 0, 0.12);
-    width: 272px;
-    height: 316px;
+    width: 310px;
+    height: 330px;
     border-radius: 20px;
     background-color: #fff; }
     .heir__visual-card-top {
@@ -611,7 +586,6 @@ body {
 
 .heir__footer {
   position: absolute;
-  top: 100%;
   width: 100%;
   bottom: 0;
   font-size: 12.5px;
@@ -1064,6 +1038,7 @@ input[type="number"] {
         left: 50%;
         height: 20px; }
       .heir__top-cta {
+        width: unset;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -webkit-flex-direction: column;
@@ -1100,7 +1075,10 @@ input[type="number"] {
         height: auto;
         right: unset; }
       .heir__visual-card {
-        display: none; }
+        position: relative;
+        right: unset;
+        top: unset;
+        width: 100%; }
     .heir__contact {
       position: static; }
       .heir__contact span {
@@ -1108,8 +1086,9 @@ input[type="number"] {
     .heir-contact-container {
       padding-left: 30px; }
     .heir__footer {
-      top: 200%;
-      padding: 0 20px; } }
+      padding: 0 20px;
+      bottom: unset;
+      top: 1130px; } }
 
 @media only screen and (max-width: 639px) {
   .heir__top {
@@ -1117,7 +1096,9 @@ input[type="number"] {
   .heir__modal-main {
     width: 90%; }
     .heir__modal-main.contact {
-      width: 90%; } }
+      width: 90%; }
+  .heir__footer {
+    top: 1150px; } }
 
 @media only screen and (max-width: 559px) {
   .heir__modal-personal .btn-container {
@@ -1138,11 +1119,6 @@ input[type="number"] {
     left: 0;
     top: -webkit-calc(100% + 50px);
     top: calc(100% + 50px); }
-    .heir__visual-img {
-      display: none; }
-      .heir__visual-img-mobile {
-        display: block;
-        width: 100%; }
   .heir__top-soon {
     font-size: 17px; }
     .heir__top-soon span {
@@ -1237,11 +1213,11 @@ input[type="number"] {
     .heir__contact-socials a {
       margin-right: 20px;
       margin-bottom: 0; }
+  .heir__footer {
+    top: 980px; }
   .heir__modal-personal, .heir__modal-success {
     min-height: 1024px;
     height: 1024px; }
-  .heir__footer {
-    top: 130%; }
   .contact-info {
     width: unset;
     margin: 80px 0 12px 0; } }
@@ -1272,7 +1248,7 @@ input[type="number"] {
         font-size: 16px;
         padding-bottom: 16px; }
   .heir__footer {
-    top: 100%; }
+    top: 880px; }
     .heir__footer-container {
       margin-top: 20px;
       -webkit-box-orient: vertical;
