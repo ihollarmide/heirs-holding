@@ -99,6 +99,12 @@ $(document).ready(function() {
       $("#modal-2").removeClass("show");
       $("#modal-bg-2").removeClass("show");
       $('body,html').removeAttr("style");
+    
+    } else if ($(e.target).is('#modal-3')) {
+
+      $("#modal-3").removeClass("show");
+      $("#modal-bg-3").removeClass("show");
+      $('body,html').removeAttr("style");
     }
   });
 
