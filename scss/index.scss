@@ -132,6 +132,21 @@ body {
     }
   }
 
+  &__about-link {
+    font-size: 16px;
+    line-height: 19px;
+    color: inherit;
+    text-decoration: none;
+    transition: all .2s;
+    color: $heirs-grey;
+    padding-right: 12px;
+    display: inline-block;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
   &__contact {
     height: 22.67px;
     align-items: center;
@@ -142,7 +157,8 @@ body {
     transition: all .2s;
 
     svg {
-      fill: #5e5e5e;
+      fill: $heirs-grey;
+      display: none;
     }
 
     span {
@@ -409,6 +425,18 @@ body {
 
       @media only screen and (min-width: 1280px) {
         width: 600px;
+      }
+    }
+
+    &-about {
+      width: 500px;
+      padding: 30px 0 20px 60px;
+
+      p {
+        font-size: 18px;
+        line-height: 150%;
+        font-weight: 500;
+        margin-bottom: 30px;
       }
     }
 
@@ -1061,6 +1089,10 @@ input[type="number"] {
       &-personal.heir-contact {
         width: 350px;
       }
+
+      &-about {
+        width: 80%;
+      }
       
     }
 
@@ -1082,7 +1114,7 @@ input[type="number"] {
     }
 
     &__modal-close {
-      top: 49px;
+      top: 27px;
 
       &.contact {
         top: 29px;
@@ -1162,6 +1194,10 @@ input[type="number"] {
             padding-top: 20px;
           }
         }
+      }
+
+      &-about {
+        padding-left: 30px;
       }
 
       &-personal {
@@ -1298,6 +1334,12 @@ input[type="number"] {
       padding: 15px 0;
     }
 
+    &__about {
+      &-link {
+        padding-right: 40px;
+      }
+    }
+
     &__header,
     &__bg {
       padding: 0 20px;
@@ -1340,6 +1382,12 @@ input[type="number"] {
           left: unset;
           top: unset;
         }
+      }
+
+      &-about {
+        padding-top: 100px;
+        padding-left: 0;
+        width: 100%;    
       }
 
       &-content {
@@ -1418,7 +1466,7 @@ input[type="number"] {
         position: fixed;
         top: 0;
         left: 0;
-        padding: 20px;
+        padding: 20px 20px 0 20px;
         width: 100%;
         background: #fff;
         z-index: 120;
@@ -1491,6 +1539,10 @@ input[type="number"] {
     }
 
     &__contact {
+      svg {
+        display: unset;
+      }
+
       span {
         display: none;
       }
@@ -1553,7 +1605,15 @@ input[type="number"] {
   }
 }
 
-
+@include breakpoint("phone") {
+  .heir {
+    &__about {
+      &-link {
+        padding-right: 20px;
+      }
+    }
+  }
+}
 
 @include breakpoint("phone-small") {
 
@@ -1561,6 +1621,12 @@ input[type="number"] {
 
     &__top {
       width: unset;
+    }
+
+    &__about {
+      &-link {
+        padding-right: 15px;
+      }
     }
   }
 }

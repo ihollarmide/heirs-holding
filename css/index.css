@@ -150,6 +150,19 @@ body {
     .heir__nav-social:hover svg {
       fill: #fe0000; }
 
+.heir__about-link {
+  font-size: 16px;
+  line-height: 19px;
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  color: #5e5e5e;
+  padding-right: 12px;
+  display: inline-block; }
+  .heir__about-link:hover {
+    color: #fe0000; }
+
 .heir__contact {
   height: 22.67px;
   -webkit-box-align: center;
@@ -163,7 +176,8 @@ body {
   -webkit-transition: all .2s;
   transition: all .2s; }
   .heir__contact svg {
-    fill: #5e5e5e; }
+    fill: #5e5e5e;
+    display: none; }
   .heir__contact span {
     padding-left: 8px; }
   .heir__contact:hover {
@@ -392,6 +406,14 @@ body {
     @media only screen and (min-width: 1280px) {
       .heir__modal-content {
         width: 600px; } }
+  .heir__modal-about {
+    width: 500px;
+    padding: 30px 0 20px 60px; }
+    .heir__modal-about p {
+      font-size: 18px;
+      line-height: 150%;
+      font-weight: 500;
+      margin-bottom: 30px; }
   .heir__modal-personal {
     width: 100%; }
     .heir__modal-personal.heir-contact {
@@ -975,6 +997,8 @@ input[type="number"] {
     width: 55%; }
   .heir__modal-personal.heir-contact {
     width: 350px; }
+  .heir__modal-about {
+    width: 80%; }
   .heir__footer {
     padding: 0 30px; }
   .contact-info {
@@ -984,7 +1008,7 @@ input[type="number"] {
   .heir__modal-main {
     width: 50%; }
   .heir__modal-close {
-    top: 49px; }
+    top: 27px; }
     .heir__modal-close.contact {
       top: 29px; } }
 
@@ -1020,6 +1044,8 @@ input[type="number"] {
         padding-top: 0; }
       .heir__modal-headings.contact-headings h3 {
         padding-top: 20px; }
+    .heir__modal-about {
+      padding-left: 30px; }
     .heir__modal-personal .front,
     .heir__modal-personal .back {
       padding-left: 30px; }
@@ -1108,6 +1134,8 @@ input[type="number"] {
     width: 100%; }
   .heir__header-container {
     padding: 15px 0; }
+  .heir__about-link {
+    padding-right: 40px; }
   .heir__header, .heir__bg {
     padding: 0 20px; }
   .heir__top {
@@ -1133,6 +1161,10 @@ input[type="number"] {
       right: unset;
       left: unset;
       top: unset; }
+  .heir__modal-about {
+    padding-top: 100px;
+    padding-left: 0;
+    width: 100%; }
   .heir__modal-content {
     height: 100vh;
     max-height: 100vh;
@@ -1177,7 +1209,7 @@ input[type="number"] {
     position: fixed;
     top: 0;
     left: 0;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     width: 100%;
     background: #fff;
     z-index: 120; }
@@ -1225,6 +1257,8 @@ input[type="number"] {
 @media only screen and (max-width: 479px) {
   .heir__logo {
     width: 168px; }
+  .heir__contact svg {
+    display: unset; }
   .heir__contact span {
     display: none; }
   .heir__top {
@@ -1267,6 +1301,12 @@ input[type="number"] {
             -ms-flex-order: 2;
                 order: 2; } }
 
+@media only screen and (max-width: 399px) {
+  .heir__about-link {
+    padding-right: 20px; } }
+
 @media only screen and (max-width: 350px) {
   .heir__top {
-    width: unset; } }
+    width: unset; }
+  .heir__about-link {
+    padding-right: 15px; } }
