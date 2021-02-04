@@ -616,7 +616,6 @@ body {
   letter-spacing: 0.01em; }
   .heir__footer-container {
     padding: 18px 0 25px;
-    border-top: 1px solid #c5c5c5;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
